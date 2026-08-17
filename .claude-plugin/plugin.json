@@ -1,11 +1,11 @@
 {
   "name": "company-brain-4-sellers",
   "description": "Company brain implementation of the LLM Wiki to support sales teams.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Jose Castellanos Molina"
   },
-  "skills": [ ".claude/skills/ingest/", ".claude/skills/lint/", ".claude/skills/query/"],
+  "commands": [ ".claude/skills/ingest/", ".claude/skills/lint/", ".claude/skills/query/"],
   "agents": [".claude/agents/heatmap-whitespace.md"],
   "mcpServers": {
     "linkedin": {
