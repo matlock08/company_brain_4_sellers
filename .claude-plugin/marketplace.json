@@ -1,0 +1,16 @@
+{
+  "name": "company-brain-4-sellers-marketplace",
+  "owner": {
+    "name": "Jose Castellanos Molina"
+  },
+  "metadata": {
+    "description": "Custom plugins for my team"
+  },
+  "plugins": [
+    {
+      "name": "company-brain-4-sellers",
+      "source": "./",
+      "description": "Company brain implementation of the LLM Wiki to support sales teams."
+    }
+  ]
+}

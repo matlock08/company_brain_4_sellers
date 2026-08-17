@@ -1,8 +1,4 @@
-# Ignore all local Claude settings
-.claude/
 
-# Ignore Claude cache and temp files
-.claude-plugin/
 
 .obsidian/
 

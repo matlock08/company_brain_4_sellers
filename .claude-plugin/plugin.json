@@ -1,0 +1,10 @@
+{
+  "name": "company-brain-4-sellers",
+  "description": "Company brain implementation of the LLM Wiki to support sales teams.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jose Castellanos Molina"
+  },
+  "keywords": ["company brain", "sellers", "automation","llm wiki"],
+  "skills": ".claude/skills/"
+}
