@@ -3,9 +3,6 @@
   "owner": {
     "name": "Jose Castellanos Molina"
   },
-  "metadata": {
-    "description": "Custom plugins for my team"
-  },
   "plugins": [
     {
       "name": "company-brain-4-sellers",
