@@ -8,7 +8,7 @@
     {
       "name": "company-brain",
       "displayName": "Company Brain 4 Sellers",
-      "source": "./company_brain",
+      "source": "./company-brain",
       "description": "Builds a Wiki following LLM wiki from Andrej karpathy approach, using different skills and agents to read diferent input files and use them to build the wiki.",
       "author": {
         "name": "Jose Castellanos Molina"
