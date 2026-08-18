@@ -1,13 +1,18 @@
 {
   "name": "company-brain-4-sellers-marketplace",
+  "description": "Company brain implementation of the LLM Wiki to support sales teams.",
   "owner": {
     "name": "Jose Castellanos Molina"
   },
   "plugins": [
     {
-      "name": "company-brain-4-sellers",
-      "source": "./",
-      "description": "Company brain implementation of the LLM Wiki to support sales teams."
+      "name": "company-brain",
+      "displayName": "Company Brain 4 Sellers",
+      "source": "./company_brain",
+      "description": "Builds a Wiki following LLM wiki from Andrej karpathy approach, using different skills and agents to read diferent input files and use them to build the wiki.",
+      "author": {
+        "name": "Jose Castellanos Molina"
+      }
     }
   ]
 }
