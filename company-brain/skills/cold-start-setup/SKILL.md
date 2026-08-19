@@ -109,7 +109,7 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 > - **Size** — e.g., "Approximate number of employees." 
 > - **Regulated** — e.g., "Who are the regulators that this company is subject toß or N/A if not applicable." 
 
-
+Created the base folder structure for the plugin and write the CLAUDE.md file 
 
 ## After writing
 
@@ -125,9 +125,17 @@ If yes, show this tailored list (not a generic template — these are the concre
 > - **Query data against your wiki** — e.g., "Query against your wiki to provide information." Try: `/company-brain:query`
 > - **Lint against your wiki** — e.g., "Check and lint your wiki." Try: `/company-brain:lint`
 >
+> - **Whitespace Agent** — e.g., "Once filled some information do some resarch with the whitespace agent." Try: `find white space, what should we pitch next, heat map gaps, qualify new opportunities`
 
 
-1. **Show the summary.** "Here's what I heard. The DPA playbook is the part to check hardest — did I get your positions right?"
+1. **Show the summary.** 
+   > "Done. Your practice profile is at `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` — a plain text file you can read and edit directly. Here's a summary of what you told me:"
+   >
+   > - Company name: [company name]
+   > - Industry: [industry]
+   > - WebPage: [webpage]
+   > - Size: [size]
+   > - Regulated: [regulators]
 
 2. **Close with the "you can change anything later" note:**
 
