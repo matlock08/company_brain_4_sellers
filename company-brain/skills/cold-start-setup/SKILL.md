@@ -1,8 +1,7 @@
 ---
 name: cold-start-setup
 description: >
-  Run the cold-start setup — learns your privacy practice and writes CLAUDE.md
-  from your policy, DPA template, and a reference PIA. Use on first run, when
+  Run the cold-start setup — learns preferences and writes CLAUDE.md. Use on first run, when
   CLAUDE.md is missing or has placeholders, or when the user says "set up the
   plugin", "onboard me", "configure plugin", or wants to re-run the
   setup.
@@ -96,11 +95,11 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 
 ### Opening
 
-> I'm going to help with DPAs, DSARs, PIAs, and keeping an eye on when the regs move under you. Before I do any of that, I need to know what kind of privacy shop this is. Ten minutes.
+> I'm going to help with with some question to define the structure of your own LLM wiki. This question will help to understand the type of company you try to sell products.
 >
-> Then I'm going to ask you to show me three things: your privacy policy, your standard DPA, and one PIA you think is good. I'll learn more from those than from anything you tell me.
+> Then I'm going to ask you some question to understand the compnay name, industry as well as it is regulated. I'll learn more from those than from anything you tell me.
 
-### Part 0: Who's using this, and what's connected
+### To whom you are trying to sell products 
 
 
 
@@ -116,6 +115,8 @@ If yes, show this tailored list (not a generic template — these are the concre
 > **Here's what I'm good at in privacy practice:**
 >
 > - **Ingest new data against your wiki** — e.g., "Automatically reads from raw_sources and updates the wiki." Try: `/company-brain:ingest`
+> - **Query data against your wiki** — e.g., "Query against your wiki to provide information." Try: `/company-brain:query`
+> - **Lint against your wiki** — e.g., "Check and lint your wiki." Try: `/company-brain:lint`
 >
 
 
