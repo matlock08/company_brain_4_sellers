@@ -84,12 +84,11 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 **Pause for real answers.** Some questions have quick tap-through answers (controller vs. processor, regulatory footprint). Others need the user to type something, describe something, or upload a document (privacy policy, DPA template, reference PIA, DPA negotiating positions, systems-list for DSARs). When a question needs more than a quick tap:
 
 - **Ask the question and wait.** Say explicitly: "This one needs a typed answer — I'll wait." Do not move to the next question until the user responds.
-- **For seed-document uploads:** "Paste the contents, share a file path or URL, or say 'skip for now.' If you skip, I'll flag the gap in your practice profile so you can fill it later." Then actually wait.
-- **Before writing the practice profile:** review the interview. List any questions that were skipped or answered with placeholders. Say: "Before I write your practice profile, here's what's still open: [list]. Want to fill any of these now, or leave them as placeholders?" Then wait for the answer.
-- **Never** write a practice profile with silent gaps. Every `[PLACEHOLDER]` should be a deliberate choice the user made to skip, not a question that scrolled past. If the DPA template or reference PIA was skipped, note `[POSITIONS UNTESTED]` so downstream skills know.
+- **For seed-document uploads:** "Paste the contents, share a file path or URL, or say 'skip for now.' If you skip, I'll flag the gap in your company profile so you can fill it later." Then actually wait.
+- **Before writing the company profile:** review the interview. List any questions that were skipped or answered with placeholders. Say: "Before I write your company profile, here's what's still open: [list]. Want to fill any of these now, or leave them as placeholders?" Then wait for the answer.
+- **Never** write a company profile with silent gaps. Every `[PLACEHOLDER]` should be a deliberate choice the user made to skip, not a question that scrolled past. 
 - **Pause and resume.** Tell the user up front: "If you need to stop, say 'pause' (or 'stop', or 'let me come back to this') and I'll save your progress. Run `/company-brain:cold-start-setup` again later and I'll pick up where you left off." When the user pauses, write a partial configuration to `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` with a `<!-- SETUP PAUSED AT: [section name] — run /company-brain:cold-start-setup to resume -->` comment at the top and `[PENDING]` markers (distinct from `[PLACEHOLDER]`) on unanswered fields. When setup re-runs and finds a paused config, greet the user: "Welcome back. You paused at [section]. Your earlier answers are saved. Pick up where we left off, or start over?" Do not re-ask questions already answered.
 
-**Verify user-stated legal facts as they come up in setup.** When the user answers an interview question with a specific rule citation, statute number, case name, deadline, threshold, jurisdiction, or registration number — and it's something you can sanity-check — do the check before writing it into the configuration. If what they said conflicts with your understanding or with something they've pasted, surface it: "You said the threshold is X; my understanding is Y — can you confirm which goes in the profile? `[premise flagged — verify]`" A wrong fact written into CLAUDE.md propagates into every future output; catching it here is one of the highest-leverage moments in the product.
 
 ## The interview
 
@@ -109,7 +108,7 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 > - **Size** — e.g., "Approximate number of employees." 
 > - **Regulated** — e.g., "Who are the regulators that this company is subject toß or N/A if not applicable." 
 
-Created the base folder structure for the plugin and write the CLAUDE.md file in the selected scope. If the user is in a project scope, create the config path under the project folder. If the user is in a user scope, create the config path under `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md`.
+If the user is in a project scope, create the config path under the project folder `CLAUDE.md`. If the user is in a user scope, create the config path under `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md`.
 
 ## After writing
 
@@ -129,7 +128,7 @@ If yes, show this tailored list (not a generic template — these are the concre
 
 
 1. **Show the summary.** 
-   > "Done. Your practice profile is at `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` — a plain text file you can read and edit directly. Here's a summary of what you told me:"
+   > "Done. Your practice profile is at  — a plain text file you can read and edit directly. Here's a summary of what you told me:"
    >
    > - Company name: [company name]
    > - Industry: [industry]
@@ -139,7 +138,6 @@ If yes, show this tailored list (not a generic template — these are the concre
 
 2. **Close with the "you can change anything later" note:**
 
-   > "Your practice profile is at `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` — a plain text file you can read and edit directly. Anything you answered can be changed:
    >
    > - Edit the file directly for a quick change
    > - Run `/company-brain:cold-start-setup --redo` for a full re-interview
