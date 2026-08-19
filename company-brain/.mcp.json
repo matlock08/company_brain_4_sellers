@@ -2,8 +2,8 @@
     "mcpServers": {
         "linkedin": {
           "type": "stdio",
-          "command": "cmd",
-          "args": [ "/c", "uvx","mcp-server-linkedin@latest" ],
+          "command": "uvx",
+          "args": [ "mcp-server-linkedin@latest" ],
           "env": {}
         }
     }

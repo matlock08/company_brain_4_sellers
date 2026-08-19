@@ -6,9 +6,9 @@ and keep the whole thing consistent. Do the bookkeeping so I don't have to.
 
 # Wiki Schema
 
-You (the LLM agent) are the maintainer of this account knowledge wiki. The human Account Technical Leader curates sources, directs analysis, and makes the calls; you do all filing, cross-referencing, synthesis, and bookkeeping. This file defines the structure, conventions, and workflows. Follow it exactly; propose changes to it rather than silently deviating.
+You (the LLM agent) are the maintainer of this account knowledge wiki. The human curates sources, directs analysis, and makes the calls; you do all filing, cross-referencing, synthesis, and bookkeeping. This file defines the structure, conventions, and workflows. Follow it exactly; propose changes to it rather than silently deviating.
 
-Pattern origin: Karpathy's LLM Wiki, adapted for ATL account work. Core principle: **the wiki is a persistent, compounding artifact** — knowledge is integrated once and kept current, never re-derived from scratch.
+Pattern origin: Karpathy's LLM Wiki, adapted for role work. Core principle: **the wiki is a persistent, compounding artifact** — knowledge is integrated once and kept current, never re-derived from scratch.
 
 ## Directory layout
 
@@ -18,12 +18,12 @@ index.md             ← catalog of every wiki page; read this FIRST on any task
 log.md               ← append-only journal of ingests/queries/lints
 raw_sources/         ← immutable raw sources. READ-ONLY. Never edit, never delete.
 wiki/
-  overview.md        ← living synthesis of account state (you keep it current)
+  overview.md        ← living synthesis of [COMPANY] state (you keep it current)
   competitors/       ← one page per validated competitor product detected
-  heat_map/          ← one page with a heat map table where columns are the IBM Sales Plays products status
-  org_chart/         ← one page with organization chart and one page per people with profile, linkedin 
+  heat_map/          ← one page with a heat map table where columns are the Sales Plays products and one row per [COMPANY]
+  org_chart/         ← one page with organization chart and one page per people with profile, linkedin information is pulled when available
   topics/            ← All other topics files
-  whitespaces/       ← Documents with a compelling reason to act all the opportunities to position any of the IBM Sales Plays that are empty or with a clear chance to expand on the given the research on industry trends , linkedin profile signals or internal evidence provided by team
+  whitespaces/       ← Documents with a compelling reason to act for all the opportunities to position any of the Sales Plays that are empty or with a clear chance to expand on the given the research on industry trends , linkedin profile signals or internal evidence provided by team
 ```
 
 Source filenames: `YYYY-MM-DD_<type>.md` where `<type>` ∈ `meeting | internal | research | exploration`.
@@ -42,7 +42,7 @@ Rules: Competitor pages are NEVER deleted. When competitor has an active, deploy
 Frontmatter: `type: heat_map`, `status: active`, `date`, `updated`.
 
 Sections: 
-**Table** with his format that maps any existing Open Opportunity on ISC (Salesforce) with their corresponding Sales Play from IBM, add a single row with customer Name and fill the corresponding columns with and **X** if the opportunity existing Open (Not lost) blanks if we don't have any opportunity in the current fiscal year
+**Table** with his format that maps any existing Open Opportunity on ISC (Salesforce) with their corresponding Sales Play from IBM, add a single row with customer Name and fill the corresponding columns with and **X** if the opportunity existing Open (Not lost) or **IB** for Installed Base blanks if we don't have any opportunity in the current fiscal year.
 <table>
   <thead>
     <tr>
@@ -100,7 +100,7 @@ Rules: Org Chart pages are NEVER deleted or rewritten after the fact. New change
 
 Frontmatter: `type: topic`, `status: active`, `date`, `updated`.
 
-Sections: **Context** · **Cummary**.
+Sections: **Context** · **Summary**.
 
 Rules: Topics pages are NEVER deleted or rewritten after the fact.
 
@@ -108,7 +108,7 @@ Rules: Topics pages are NEVER deleted or rewritten after the fact.
 
 Frontmatter: `type: whitespace`, `status: active`, `date`, `updated`.
 
-Sections: **Context** · **Cummary**.
+Sections: **Context** · **Summary**.
 
 Rules: Whitespaces pages are NEVER deleted or rewritten after the fact. New changes updates the field `updated`. During lint, check each sales play.
 
