@@ -9,7 +9,6 @@ Edit directly or re-run any plugin's `/cold-start-setup` to update.*
 **Size:** [Employee count / relevant headcount]
 **Regulators we're subject to:** [CONSAR, SHCP, CNBV, BANXICO, SAR, AFORES, etc. — only what applies]
 
-
 ---
 
 *Per-plugin practice profiles (playbooks, review frameworks, house style, matter workspaces) live alongside this file in each plugin's folder. This file holds the facts that are true regardless of which plugin you're using.*

@@ -101,6 +101,13 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 
 ### To whom you are trying to sell products 
 
+> **Here's what I'm good at in privacy practice:**
+>
+> - **Company Name** — e.g., "Company name we are trying to approach and research to identify potential sell opportunities." 
+> - **Industry** — e.g., "Industry associated to this company." 
+> - **WebPage** — e.g., "official URL of the companies webpage or investors reports." 
+> - **Size** — e.g., "Approximate number of employees." 
+> - **Regulated** — e.g., "Who are the regulators that this company is subject toß or N/A if not applicable." 
 
 
 
