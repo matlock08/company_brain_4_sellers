@@ -108,7 +108,7 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 > - **Size** — e.g., "Approximate number of employees." 
 > - **Regulated** — e.g., "Who are the regulators that this company is subject toß or N/A if not applicable." 
 
-If the user is in a project scope, create the config path under the project folder `CLAUDE.md`. If the user is in a user scope, create the config path under `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md`.
+If the user is in a project scope, create the config path under the project folder `CLAUDE.md` as well as all the project structure. If the user is in a user scope, create the config path under `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` as well as all the project structure.
 
 ## After writing
 

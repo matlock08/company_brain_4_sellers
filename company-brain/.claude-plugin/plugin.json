@@ -1,6 +1,6 @@
 {
   "name": "company-brain",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Automatically maintains a wiki based on your company's internal knowledge and documents.",
   "author": {
     "name": "Jose Castellanos Molina"
