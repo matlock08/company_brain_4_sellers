@@ -51,7 +51,7 @@ Look for `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-p
 - **If it exists:** Read it. Show a one-line confirmation: "This wiki is for company [name], [practice setting], at [company], operating in [industry]. Right? (Or say 'update' to change the shared profile.)" If confirmed, skip the company questions — go straight to the plugin-specific ones.
 - **If it doesn't exist:** You'll be the first plugin this user set up. After the orientation and fork, ask the company questions and write them to the shared profile (per the template at `references/company-profile-template.md` in the plugin root), then continue with the plugin-specific questions. Tell the user: "I've saved your company profile — the other plugins will read it and skip these questions."
 
-The company questions that belong in the shared profile (and should NOT be re-asked if it exists): company name, industry, webpage, size, regulators. 
+The company questions that belong in the shared profile (and should NOT be re-asked if it exists): company name, industry, webpage, size, regulators, isc account page.
 
 ## Install scope check
 
@@ -81,7 +81,7 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 - **Assume the answer exists somewhere.** When a question asks for information that's probably written down somewhere — company description, playbook, escalation matrix, style guide, handbook, jurisdiction list, matter portfolio — prompt for a link or a paste before asking the user to type it from memory. "Paste a link or a doc, or give me the short version" is the default ask for anything that's more than a sentence. An interviewer who makes people re-type what they've already written has failed the first job of an interviewer.
 - **Batch size — count subparts.** "Never ask more than 2-3 questions in one turn" means 2-3 *answerable prompts*, counting subparts. One question with 5 subparts is 5 questions. The test: can the user answer without scrolling? If the questions don't fit on one screen, it's too many. Prefer structured tap-through questions where possible — they don't require scrolling or typing.
 
-**Pause for real answers.** Some questions have quick tap-through answers (controller vs. processor, regulatory footprint). Others need the user to type something, describe something, or upload a document (privacy policy, DPA template, reference PIA, DPA negotiating positions, systems-list for DSARs). When a question needs more than a quick tap:
+**Pause for real answers.** Some questions have quick tap-through answers. Others need the user to type something, describe something, or to provide an URL (External or internal only). When a question needs more than a quick tap:
 
 - **Ask the question and wait.** Say explicitly: "This one needs a typed answer — I'll wait." Do not move to the next question until the user responds.
 - **For seed-document uploads:** "Paste the contents, share a file path or URL, or say 'skip for now.' If you skip, I'll flag the gap in your company profile so you can fill it later." Then actually wait.
@@ -107,8 +107,9 @@ Populate the company profile only from the user's typed answers. Do not read `~/
 > - **WebPage** — e.g., "official URL of the companies webpage or investors reports." 
 > - **Size** — e.g., "Approximate number of employees." 
 > - **Regulated** — e.g., "Who are the regulators that this company is subject toß or N/A if not applicable." 
+> - **ISC Account Page** — e.g., "URL to the company's ISC account page." 
 
-If the user is in a project scope, create the config path under the project folder `CLAUDE.md` as well as all the project structure. If the user is in a user scope, create the config path under `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` as well as all the project structure.
+If the user is in a project scope, create the config path under the project folder `CLAUDE.md` as well as all the project structure. If the user is in a user scope, create the config path under `~/.claude/plugins/config/company-brain-4-sellers-marketplace/company-brain/CLAUDE.md` and all the project structure in the current directory.
 
 ## After writing
 
@@ -118,13 +119,14 @@ If the user is in a project scope, create the config path under the project fold
 
 If yes, show this tailored list (not a generic template — these are the concrete things this plugin does best):
 
-> **Here's what I'm good at in privacy practice:**
+> **Here's what I'm good at in account management:**
 >
 > - **Ingest new data against your wiki** — e.g., "Automatically reads from raw_sources and updates the wiki." Try: `/company-brain:ingest`
 > - **Query data against your wiki** — e.g., "Query against your wiki to provide information." Try: `/company-brain:query`
 > - **Lint against your wiki** — e.g., "Check and lint your wiki." Try: `/company-brain:lint`
 >
 > - **Whitespace Agent** — e.g., "Once filled some information do some resarch with the whitespace agent." Try: `find white space, what should we pitch next, heat map gaps, qualify new opportunities`
+> - **Retrospective Agent** — e.g., "Once an opportunity is closed (Win or loss) perform retrospective analysis." Try: `identify lessons learned, identify what went well, identify what went wrong, identify what we can do better next time`
 
 
 1. **Show the summary.** 
@@ -135,6 +137,7 @@ If yes, show this tailored list (not a generic template — these are the concre
    > - WebPage: [webpage]
    > - Size: [size]
    > - Regulated: [regulators]
+   > - ISC Account Page: [isc_account_page]
 
 2. **Close with the "you can change anything later" note:**
 
